@@ -30,8 +30,8 @@
 
 
           
-          
-          
+         
+        
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -43,11 +43,11 @@
             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
           <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
-            <li><a class="dropdown-item" href="#">salir</a></li>
+            <li><a class="dropdown-item" href="#" id="salir">salir</a></li>
             <!-- <li><a class="dropdown-item" href="#">Settings</a></li>
             <li><a class="dropdown-item" href="#">Profile</a></li> -->
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">cerrar caja</a></li>
+            <li><a class="dropdown-item" href="#" id="cerrarCaja">cerrar caja</a></li>
           </ul>
         </div>
       </div>
@@ -57,7 +57,7 @@
 
   <section class="container">
     <h1 class="text-center text-primary"></h1>
-      <div class="mostrar container"></div>
+      <div class="mostrar container" id="mostrar"></div>
 
   </section>
 
