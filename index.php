@@ -62,6 +62,9 @@
   </section>
 
   <footer>
+      <div class="logo container-fluid">
+
+      </div>
       segundo footer
   </footer>
 
