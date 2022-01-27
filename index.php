@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css">
- 
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
   <header class="p-3 mb-3 border-bottom">
@@ -19,17 +22,7 @@
           <li><a href="#" class="nav-link px-2 link-dark"  id="abonos">ABONOS</a></li>
           <li><a href="#" class="nav-link px-2 link-dark"  id="boletas">BOLETAS</a></li>
           <li><a href="#" class="nav-link px-2 link-dark"  id="informes">INFORMES</a></li>
-          <!-- <li><a class="nav-link px-2 link-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown button
-              </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul></li> -->
-
-
-          
+               
          
         
         </ul>
@@ -62,16 +55,76 @@
   </section>
 
   <footer>
+
       <div class="logo container-fluid">
 
       </div>
-      segundo footer
+     
   </footer>
 
+
+  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="js/funciones.js"></script>
 <script src="js/routes.js"></script>
+<script>
+    function pagEliminar(e){
+     
+      let id=document.getElementById('delete').dataset.eliminar
 
+      alert(id)
+
+        xmlhttp.onreadystatechange=function(){
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+               
+                // let datos=document.getElementById("mostrar")
+              
+                // datos.innerHTML=xmlhttp.responseText
+
+                cambiarPagina()
+    
+            }
+        }
+        xmlhttp.open("GET","php/eliminarComprador.php?eli="+id,true)
+        xmlhttp.send()
+
+
+    
+    }
+
+
+    function cambiarPagina(){
+   
+
+        xmlhttp.onreadystatechange=function(){
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+               
+                let datos=document.getElementById("mostrar")
+              
+                datos.innerHTML=xmlhttp.responseText
+
+            }
+        }
+        xmlhttp.open("GET","php/compradores.php",true);
+        xmlhttp.send();
+ 
+    }
+ 
+    function agregarComprador(){
+      xmlhttp.onreadystatechange=function(){
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+               
+                let datos=document.getElementById("mostrar")
+              
+                datos.innerHTML=xmlhttp.responseText
+
+            }
+        }
+        xmlhttp.open("GET","php/agregarComprador.php",true);
+        xmlhttp.send();
+    }
 </script>
+
+
 </body>
 </html>
